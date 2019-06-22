@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueGrey_800"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lly_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/lly_bars"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rdg_bars"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blueGrey_900"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:weightSum="3">
+
+            <RadioButton
+                android:id="@+id/rdbtn_music"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/icon_bar_music_selector"
+                android:gravity="center"
+                android:onClick="onClickMusicBar"
+                android:text="音乐馆"
+                android:textColor="@color/bar_text_color_selector"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rdbtn_find"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/icon_bar_find_selector"
+                android:gravity="center"
+                android:onClick="onClickFindBar"
+                android:text="发现"
+                android:textColor="@color/bar_text_color_selector"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rdbtn_my"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/icon_bar_my_selector"
+                android:gravity="center"
+                android:onClick="onClickMyBar"
+                android:text="我的"
+                android:textColor="@color/bar_text_color_selector"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>
