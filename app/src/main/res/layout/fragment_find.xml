@@ -2,6 +2,7 @@
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/blueGrey_800">
 
@@ -26,8 +27,8 @@
                 android:textStyle="bold" />
 
             <android.support.v7.widget.SearchView
-                android:id="@+id/schv_music"
-                android:layout_width="200dp"
+                android:id="@+id/schv_find"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </android.support.v7.widget.Toolbar>
     </LinearLayout>

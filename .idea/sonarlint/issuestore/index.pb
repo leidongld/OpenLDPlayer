@@ -15,3 +15,7 @@ Kapp/src/main/java/com/example/leidong/openldplayer/fragment/MyFragment.java,f\
 Mapp/src/main/java/com/example/leidong/openldplayer/activity/BaseActivity.java,b\d\bdc51126617f8da991a758b834922ebc7a507cfb
 }
 Mapp/src/main/java/com/example/leidong/openldplayer/activity/MainActivity.java,9\a\9a460545115fcea65c3fbc894ffd5657bd7668c4
+|
+Lapp/src/main/java/com/example/leidong/openldplayer/views/LDPlayerDialog.java,6\b\6b96299d2bbfe47699544a30e1ee0bcf06a98a4f
+~
+Napp/src/main/java/com/example/leidong/openldplayer/fragment/MainFragments.java,5\8\58331fc9fee67ff290905a02656cb923571c169c

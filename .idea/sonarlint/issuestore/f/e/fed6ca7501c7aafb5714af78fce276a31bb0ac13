@@ -1,0 +1,10 @@
+
+Ksquid:S1185A"(Remove this method to simply inherit it.(İßéàúÿÿÿÿ8¡«ü·-
+Fsquid:S11857"(Remove this method to simply inherit it.(ßû¢½8å­¨ü·-
+Dsquid:S1170"!Make this final field static too.(­ñùùÿÿÿÿ8½£¤ü·-
+Fsquid:S11852"(Remove this method to simply inherit it.(öÿÕÅ8å­¨ü·-
+rsquid:S00116"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­ñùùÿÿÿÿ8½£¤ü·-
+Esquid:S1185"(Remove this method to simply inherit it.(¥Ë©8«À¥ü·-
+Fsquid:S1185<"(Remove this method to simply inherit it.(±íòÑ8¡«ü·-
+Jsquid:S1068"'Remove this unused "TAG" private field.(­ñùùÿÿÿÿ8½£¤ü·-
+¤squid:S1186-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•§çéùÿÿÿÿ8ÉÍíü·-
