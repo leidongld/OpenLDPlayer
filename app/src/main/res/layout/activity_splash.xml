@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/lly_splash_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SplashActivity"
+    android:orientation="vertical"
+    android:weightSum="6"
+    android:onClick="onClickSplash">
+
+    <LinearLayout
+        android:id="@+id/lly_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@drawable/image_splash_bg"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/txt_app_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="180dp"
+            android:text="O p e n L D P l a y e r"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/txt_app_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:text="Lei Dong"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"/>
+    </LinearLayout>
+</LinearLayout>
