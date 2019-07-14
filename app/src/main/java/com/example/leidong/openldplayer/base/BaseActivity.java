@@ -1,4 +1,4 @@
-package com.example.leidong.openldplayer.activity;
+package com.example.leidong.openldplayer.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

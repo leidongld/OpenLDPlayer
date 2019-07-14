@@ -1,5 +1,7 @@
-package com.example.leidong.openldplayer.activity;
+package com.example.leidong.openldplayer.activities.main;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.leidong.openldplayer.R;
+import com.example.leidong.openldplayer.base.BaseActivity;
 import com.example.leidong.openldplayer.fragment.FindFragment;
 import com.example.leidong.openldplayer.fragment.MainFragments;
 import com.example.leidong.openldplayer.fragment.MusicFragment;
@@ -58,14 +61,17 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void initWidgets() {
+        mRdbtnMusic.setChecked(true);
         loadMusicFragment();
     }
 
     /**
      * 加载我的页面
      */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void loadMyFragment() {
         mFragmentManager = getSupportFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
@@ -79,6 +85,7 @@ public class MainActivity extends BaseActivity {
     /**
      * 加载发现页
      */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void loadFindFragment() {
         mFragmentManager = getSupportFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
@@ -92,6 +99,7 @@ public class MainActivity extends BaseActivity {
     /**
      * 加载音乐馆界面
      */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void loadMusicFragment() {
         mFragmentManager = getSupportFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
@@ -112,6 +120,7 @@ public class MainActivity extends BaseActivity {
      *
      * @param view
      */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void onClickMusicBar(View view) {
         if (MainFragments.MUSIC_FRAGMENT != mCurrentMainFragment) {
             loadMusicFragment();
@@ -123,6 +132,7 @@ public class MainActivity extends BaseActivity {
      *
      * @param view
      */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void onClickFindBar(View view) {
         if (MainFragments.FIND_FRAGMENT != mCurrentMainFragment) {
             loadFindFragment();
@@ -134,6 +144,7 @@ public class MainActivity extends BaseActivity {
      *
      * @param view
      */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void onClickMyBar(View view) {
         if (MainFragments.MY_FRAGMENT != mCurrentMainFragment) {
             loadMyFragment();

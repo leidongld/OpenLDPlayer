@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/blueGrey_800"
     android:orientation="vertical"
-    tools:context=".activity.MainActivity"
+    tools:context=".activities.main.MainActivity"
     android:focusable="true"
     android:focusableInTouchMode="true">
 

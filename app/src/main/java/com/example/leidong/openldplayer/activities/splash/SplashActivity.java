@@ -1,4 +1,4 @@
-package com.example.leidong.openldplayer.activity;
+package com.example.leidong.openldplayer.activities.splash;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
@@ -8,11 +8,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.leidong.openldplayer.R;
+import com.example.leidong.openldplayer.activities.login.LoginActivity;
+import com.example.leidong.openldplayer.base.BaseActivity;
 import com.example.leidong.openldplayer.utils.FontUtils;
 
 import butterknife.BindView;
 
-public class SplashActivity extends BaseActivity {
+public class SplashActivity extends BaseActivity implements SplashContract.ISplashView {
+    private SplashContract.ISplashPresenter mPresenter;
+
     @BindView(R.id.lly_splash_container)
     LinearLayout mLlySplashContainer;
 
@@ -46,26 +50,18 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected void initWidgets() {
-        initTxt();
+        mPresenter = new SplashPresenter(this);
 
-        initBgAnimation();
-    }
+        mPresenter.changeFont();
 
-    /**
-     * 初始化文字
-     */
-    private void initTxt() {
-        FontUtils.setTypeface(this, mTxtAppTitle, "fonts/Smoothie_Shoppe.ttf");
-        FontUtils.setTypeface(this, mTxtAppAuthor, "fonts/Smoothie_Shoppe.ttf");
+        mPresenter.playAnim();
     }
 
     /**
      * 初始化背景动画
      */
     private void initBgAnimation() {
-        mAnimator = ObjectAnimator.ofFloat(mLlySplashBg, "alpha", 0, 1);
-        mAnimator.setDuration(3000);
-        mAnimator.start();
+
     }
 
     @Override
@@ -79,8 +75,22 @@ public class SplashActivity extends BaseActivity {
      * @param view
      */
     public void onClickSplash(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public void onChangeFont() {
+        FontUtils.setTypeface(this, mTxtAppTitle, "fonts/Smoothie_Shoppe.ttf");
+        FontUtils.setTypeface(this, mTxtAppAuthor, "fonts/Smoothie_Shoppe.ttf");
+    }
+
+    @Override
+    public void onPlayAnim() {
+        mAnimator = ObjectAnimator.ofFloat(mLlySplashBg, "alpha", 0, 1);
+        mAnimator.setDuration(3000);
+        mAnimator.start();
     }
 }
