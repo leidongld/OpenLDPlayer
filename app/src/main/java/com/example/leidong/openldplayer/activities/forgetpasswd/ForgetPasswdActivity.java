@@ -1,6 +1,6 @@
 package com.example.leidong.openldplayer.activities.forgetpasswd;
 
-import com.example.leidong.openldplayer.base.BaseActivity;
+import com.example.leidong.openldplayer.activities.BaseActivity;
 
 /**
  * Created by Lei Dong on 2019/7/14.

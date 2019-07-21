@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.example.leidong.openldplayer.R;
 import com.example.leidong.openldplayer.activities.main.MainActivity;
 import com.example.leidong.openldplayer.activities.register.RegisterActivity;
-import com.example.leidong.openldplayer.base.BaseActivity;
+import com.example.leidong.openldplayer.activities.BaseActivity;
 import com.example.leidong.openldplayer.utils.FontUtils;
 
 import butterknife.BindView;
@@ -122,15 +122,6 @@ public class LoginActivity extends BaseActivity implements LoginContract.ILoginV
 
     @Override
     protected void doBusiness() {
-        mTxtRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 
     /**
@@ -176,6 +167,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.ILoginV
      */
     public void onClickRegisterTxt(View view) {
         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();

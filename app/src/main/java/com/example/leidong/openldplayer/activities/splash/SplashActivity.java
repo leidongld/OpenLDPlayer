@@ -8,8 +8,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.leidong.openldplayer.R;
+import com.example.leidong.openldplayer.activities.BaseActivity;
 import com.example.leidong.openldplayer.activities.login.LoginActivity;
-import com.example.leidong.openldplayer.base.BaseActivity;
 import com.example.leidong.openldplayer.utils.FontUtils;
 
 import butterknife.BindView;

@@ -10,7 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.leidong.openldplayer.R;
-import com.example.leidong.openldplayer.base.BaseActivity;
+import com.example.leidong.openldplayer.activities.BaseActivity;
 import com.example.leidong.openldplayer.fragment.FindFragment;
 import com.example.leidong.openldplayer.fragment.MainFragments;
 import com.example.leidong.openldplayer.fragment.MusicFragment;
