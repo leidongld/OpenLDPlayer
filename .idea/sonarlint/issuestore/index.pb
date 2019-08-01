@@ -17,8 +17,6 @@ Lapp/src/main/java/com/example/leidong/openldplayer/views/LDPlayerDialog.java,6
 Napp/src/main/java/com/example/leidong/openldplayer/fragment/MainFragments.java,5\8\58331fc9fee67ff290905a02656cb923571c169c
 w
 Gapp/src/main/java/com/example/leidong/openldplayer/utils/FontUtils.java,2\f\2fdc254389da6ead51b3ba83bbeada86ee1c3249
-y
-Iapp/src/main/java/com/example/leidong/openldplayer/base/BaseActivity.java,6\b\6b8233812b66c66504983ac7ac3d48af6d6eb906
 ç
 ]app/src/main/java/com/example/leidong/openldplayer/activities/register/RegisterPresenter.java,d\f\df53f65c1d621fee958fe30d89c16143aeef4290
 å
@@ -75,3 +73,25 @@ Y
 )app/src/main/res/layout/common_dialog.xml,9\9\995fb99950762010b1bf4ac375e56d88344c6e8f
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+
+Oapp/src/main/java/com/example/leidong/openldplayer/activities/BaseActivity.java,5\a\5a93ce120de64e1ed2d74f5d2c1b6d0fb45f4fc7
+w
+Gapp/src/main/java/com/example/leidong/openldplayer/utils/SizeUtils.java,8\9\896d2875d05130344cbe322ca3e6f146edfb2c85
+y
+Iapp/src/main/java/com/example/leidong/openldplayer/utils/PasswdUtils.java,a\5\a5de7805b50b917c6e9b0732a20e44c9d3da3f15
+Ä
+Papp/src/main/java/com/example/leidong/openldplayer/bean/music/MusicMenuBean.java,0\2\026b8ad5815fb1d3e13a8b9e38e848cd6088b78f
+Ä
+Papp/src/main/java/com/example/leidong/openldplayer/adapter/MusicMenuAdapter.java,7\2\723e8f6e530aff26bf15181cdf532f16df5fe92b
+{
+Kapp/src/main/java/com/example/leidong/openldplayer/bean/music/Top2Bean.java,4\0\4090748184ce747dfdabc676648074e88c2468fc
+Ä
+Papp/src/main/java/com/example/leidong/openldplayer/adapter/MusicTop2Adapter.java,f\d\fdb2740998a924de80f8dc9504feff033d5157e0
+Ñ
+Tapp/src/main/java/com/example/leidong/openldplayer/bean/music/MusicSongListBean.java,e\9\e913ee3c5f5492cf495e63939bf89a4090f6140e
+ä
+Zapp/src/main/java/com/example/leidong/openldplayer/adapter/music/MusicSongListAdapter.java,e\4\e4f60e6bcf3afc5be7220450e14f0ea78e6d061a
+å
+\app/src/main/java/com/example/leidong/openldplayer/adapter/music/MusicCollectionAdapter.java,e\5\e501a447e5038e163d1df8ddb0a52f9b14d7fd7d
+Ü
+Vapp/src/main/java/com/example/leidong/openldplayer/bean/music/MusicCollectionBean.java,1\6\16bbf2590d134062137b39d15f55f5af72c89667

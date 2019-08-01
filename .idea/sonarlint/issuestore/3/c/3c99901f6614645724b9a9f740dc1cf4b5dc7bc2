@@ -1,10 +1,9 @@
 
-msquid:S00116"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˇ∏àõ8Üøè¸∑-
-?squid:S1170"!Make this final field static too.(ˇ∏àõ8˛éù¸∑-
-Esquid:S1068"'Remove this unused "TAG" private field.(ˇ∏àõ8Üøè¸∑-
-Fsquid:S11856"(Remove this method to simply inherit it.(ﬂ˚¢Ω8ò˚ó¸∑-
-§squid:S1186-"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ïßÁÈ˘ˇˇˇˇ8Ä√Í¸∑-
-Esquid:S1185"(Remove this method to simply inherit it.(•À©8êçé¸∑-
-Fsquid:S11851"(Remove this method to simply inherit it.(ˆˇ’≈8ò˚ó¸∑-
-Ksquid:S1185@"(Remove this method to simply inherit it.(›ﬂÈ‡˙ˇˇˇˇ8—ò¸∑-
-Fsquid:S1185;"(Remove this method to simply inherit it.(±ÌÚ—8¥∫ô¸∑-
+8squid:S1170"!Make this final field static too.(ˇ∏àõ
+?squid:S1185R"(Remove this method to simply inherit it.(ﬂ˚¢Ω
+>squid:S1068"'Remove this unused "TAG" private field.(ˇ∏àõ
+fsquid:S00116"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˇ∏àõ
+Dsquid:S1185\"(Remove this method to simply inherit it.(›ﬂÈ‡˙ˇˇˇˇ
+?squid:S1185M"(Remove this method to simply inherit it.(ˆˇ’≈
+>squid:S1185""(Remove this method to simply inherit it.(•À©
+?squid:S1185W"(Remove this method to simply inherit it.(±ÌÚ—
