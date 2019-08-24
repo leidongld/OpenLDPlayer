@@ -1,0 +1,13 @@
+
+Osquid:S1068",Remove this unused "mContext" private field.(»úÅ¾øÿÿÿÿ8ÔÍ‡¿-
+Osquid:S1068",Remove this unused "mImageBg" private field.(ÓÒöŒüÿÿÿÿ8ğ›Ò‡¿-
+Psquid:S1068"-Remove this unused "mTxtTitle" private field.(¢¼Àñÿÿÿÿÿ8´™Ó‡¿-
+Msquid:S1068"/Remove this unused "mTxtMessage" private field.(ü³8ÄóÔ‡¿-
+Msquid:S1068"/Remove this unused "mTxtRightOk" private field.(áûµ8¹ Ø‡¿-
+`squid:S1068:"=Remove this unused "selectDialogClickListener" private field.(Ã’¦òúÿÿÿÿ8³Úİˆ¿-
+zsquid:S1450"]Remove the "mTxtLeftCancel" field and declare it as a local variable in the relevant methods.(ã•?8îÃãˆ¿-
+Osquid:S1068"2Remove this unused "mTxtLeftCancel" private field.(ã•?8Ö¾Ø‡¿-
+zsquid:S1450"WRemove the "mContext" field and declare it as a local variable in the relevant methods.(»úÅ¾øÿÿÿÿ8ÔÍ‡¿-
+xsquid:S1450"ZRemove the "mTxtRightOk" field and declare it as a local variable in the relevant methods.(áûµ8îÃãˆ¿-
+rsquid:S00100Q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯§úÿÿÿÿ8³Úİˆ¿-
+msquid:S00100M"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñââË8³Úİˆ¿-

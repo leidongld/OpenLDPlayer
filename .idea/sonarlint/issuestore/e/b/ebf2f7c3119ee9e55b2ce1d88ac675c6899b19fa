@@ -1,0 +1,8 @@
+
+esquid:UnusedPrivateMethod?"4Remove this unused private "initBgAnimation" method.(†ÙêÓÿÿÿÿÿ8šˆ‡Î¼-
+¤squid:S1186?"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ÙêÓÿÿÿÿÿ8ÿÜ‡Î¼-
+qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(´Á´µýÿÿÿÿ8»äŸÎ¼-
+squid:S1186D"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ÿæ´“ûÿÿÿÿ
+Jsquid:S1068!".Remove this unused "mAnimation" private field.(ê¢Â«þÿÿÿÿ
+wsquid:S1450"YRemove the "mPresenter" field and declare it as a local variable in the relevant methods.(úÏ©Ä8Œ†£Î¼-
+vsquid:S1450 "XRemove the "mAnimator" field and declare it as a local variable in the relevant methods.(–”®ƒ8¸ï‡Î¼-
