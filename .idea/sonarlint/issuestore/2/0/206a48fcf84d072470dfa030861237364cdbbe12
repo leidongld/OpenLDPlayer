@@ -1,19 +1,15 @@
 
-Qsquid:S1135±"2Complete the task associated to this TODO comment.(èÜµ©8•¥öµÃ-
-Isquid:S1481"*Remove this unused "bean3" local variable.(äİë8„‚õ¾Ã-
-ƒsquid:S1450E"`Remove the "mMusicMenuAdapter" field and declare it as a local variable in the relevant methods.(ò®‡²øÿÿÿÿ8ÍÜî¡Â-
-ˆsquid:S1450P"eRemove the "mMusicSongListAdapter1" field and declare it as a local variable in the relevant methods.(÷íøèøÿÿÿÿ8ª÷Ë¼Ã-
-Isquid:S1481"*Remove this unused "bean4" local variable.(Êº·š8„‚õ¾Ã-
-Ysquid:S1068Z";Remove this unused "mMusicCollectionAdapter" private field.(™«¾Î8ÑŠ½Ã-
-Jsquid:S1068+"'Remove this unused "TAG" private field.(÷ğüñûÿÿÿÿ8Ñ·ü·-
-ˆsquid:S1450V"eRemove the "mMusicSongListAdapter2" field and declare it as a local variable in the relevant methods.(°ØÄìıÿÿÿÿ8ª÷Ë¼Ã-
-Gsquid:S1185–"(Remove this method to simply inherit it.(öÿÕÅ8•¥öµÃ-
-Esquid:S1185]"(Remove this method to simply inherit it.(¥Ë©8ß÷á¡Â-
-Dsquid:S1170+"!Make this final field static too.(÷ğüñûÿÿÿÿ8Ñ·ü·-
-~squid:S1450I"`Remove the "mMusicTop2Adapter" field and declare it as a local variable in the relevant methods.(ÛÂáÜ8¹¸ê²Ã-
-Gsquid:S1185›"(Remove this method to simply inherit it.(ßû¢½8•¥öµÃ-
-Gsquid:S1185 "(Remove this method to simply inherit it.(±íòÑ8•¥öµÃ-
-Zsquid:S1481Š"<Remove this unused "musicCollectionBeanList" local variable.(è§L8¡ê½Ã-
-rsquid:S00116+"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ğüñûÿÿÿÿ8Ñ·ü·-
-Nsquid:S1481Œ"*Remove this unused "bean2" local variable.(šë˜Œùÿÿÿÿ8«Øô¾Ã-
-Isquid:S1481‹"*Remove this unused "bean1" local variable.(¡·Í¤8è ¯¾Ã-
+ƒsquid:S1450M"`Remove the "mMusicMenuAdapter" field and declare it as a local variable in the relevant methods.(ò®‡²øÿÿÿÿ8ÍÜî¡Â-
+Esquid:S1185i"(Remove this method to simply inherit it.(¥Ë©8ß÷á¡Â-
+ˆsquid:S1450^"eRemove the "mMusicSongListAdapter2" field and declare it as a local variable in the relevant methods.(°ØÄìıÿÿÿÿ8ª÷Ë¼Ã-
+Gsquid:S1185Ä"(Remove this method to simply inherit it.(ßû¢½8ì–£àÅ-
+Qsquid:S1135Ú"2Complete the task associated to this TODO comment.(èÜµ©8ì–£àÅ-
+rsquid:S00116-"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ğüñûÿÿÿÿ8Ñ·ü·-
+Jsquid:S1068-"'Remove this unused "TAG" private field.(÷ğüñûÿÿÿÿ8Ñ·ü·-
+Gsquid:S1185¿"(Remove this method to simply inherit it.(öÿÕÅ8ì–£àÅ-
+‚squid:S1450f"dRemove the "mMusicNewAlbumAdapter" field and declare it as a local variable in the relevant methods.(×ïôá8°‹àÅ-
+„squid:S1450b"fRemove the "mMusicCollectionAdapter" field and declare it as a local variable in the relevant methods.(™«¾Î8Ÿ¤©íÄ-
+ˆsquid:S1450X"eRemove the "mMusicSongListAdapter1" field and declare it as a local variable in the relevant methods.(÷íøèøÿÿÿÿ8ª÷Ë¼Ã-
+~squid:S1450Q"`Remove the "mMusicTop2Adapter" field and declare it as a local variable in the relevant methods.(ÛÂáÜ8¹¸ê²Ã-
+Gsquid:S1185É"(Remove this method to simply inherit it.(±íòÑ8ì–£àÅ-
+Dsquid:S1170-"!Make this final field static too.(÷ğüñûÿÿÿÿ8Ñ·ü·-

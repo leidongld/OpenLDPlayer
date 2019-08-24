@@ -17,6 +17,44 @@
         android:orientation="vertical" />
 
     <LinearLayout
+        android:id="@+id/lly_current_song"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/blueGrey_700">
+        <ImageView
+            android:id="@+id/image_song"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/image_default_square"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/txt_song_name"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:lines="1"
+            android:text="hahaha"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <ImageView
+            android:id="@+id/image_current_play"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/icon_play_green"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/lly_bars"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -71,5 +109,12 @@
                 android:textSize="12sp" />
         </RadioGroup>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="临时跳转测试"
+        android:onClick="onClickJump"/>
 
 </LinearLayout>

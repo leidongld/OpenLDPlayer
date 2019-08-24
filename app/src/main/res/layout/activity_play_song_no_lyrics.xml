@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/play_bg">
+
+    <ImageView
+        android:id="@+id/icon_back"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_down" />
+
+    <ImageView
+        android:id="@+id/image_song"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_back"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_song"
+        tools:text="这是歌曲的标题"
+        android:lines="1"/>
+
+    <TextView
+        android:id="@+id/txt_single_line"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#C5CAE9"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <TextView
+        android:id="@+id/txt_current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="00:52"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_single_line" />
+
+    <TextView
+        android:id="@+id/txt_total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="4:52"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_single_line" />
+
+    <ProgressBar
+        android:id="@+id/pgb_song_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_total_time"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toEndOf="@+id/txt_current_time"
+        app:layout_constraintTop_toBottomOf="@+id/txt_single_line" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/pgb_song_progress"
+        tools:layout_editor_absoluteX="195dp">
+
+        <ImageView
+            android:id="@+id/img_loop_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_loop" />
+
+        <ImageView
+            android:id="@+id/img_previous"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_previous" />
+
+        <ImageView
+            android:id="@+id/img_play_or_stop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_play" />
+
+        <ImageView
+            android:id="@+id/img_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_next" />
+
+        <ImageView
+            android:id="@+id/img_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_list" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="202dp"
+        android:weightSum="4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <ImageView
+            android:id="@+id/img_collection"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:src="@drawable/icon_like"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"/>
+        <ImageView
+            android:id="@+id/img_download"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:src="@drawable/icon_download"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"/>
+        <ImageView
+            android:id="@+id/img_share"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:src="@drawable/icon_share"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"/>
+        <ImageView
+            android:id="@+id/img_comment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:src="@drawable/icon_talk"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"/>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

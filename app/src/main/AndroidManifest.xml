@@ -13,12 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--注册界面-->
         <activity
             android:name=".activities.register.RegisterActivity"
             android:screenOrientation="portrait"></activity>
+        <!--登录界面-->
         <activity
             android:name=".activities.login.LoginActivity"
             android:screenOrientation="portrait" />
+        <!--欢迎页-->
         <activity
             android:name=".activities.splash.SplashActivity"
             android:screenOrientation="portrait">
@@ -27,10 +30,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--主界面-->
         <activity
             android:name=".activities.main.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <!--音乐播放歌词展示界面-->
+        <activity android:name=".activities.playsong.lyrics.PlaySongLyricsActivity"
+            android:screenOrientation="portrait" />
+        <!--音乐播放无歌词界面-->
+        <activity android:name=".activities.playsong.nolyrics.PlaySongNoLyricsActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

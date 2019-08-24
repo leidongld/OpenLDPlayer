@@ -1,16 +1,20 @@
 package com.example.leidong.openldplayer.activities.main;
 
+import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.leidong.openldplayer.R;
 import com.example.leidong.openldplayer.activities.BaseActivity;
+import com.example.leidong.openldplayer.activities.playsong.nolyrics.PlaySongNoLyricsActivity;
 import com.example.leidong.openldplayer.fragment.FindFragment;
 import com.example.leidong.openldplayer.fragment.MainFragments;
 import com.example.leidong.openldplayer.fragment.MusicFragment;
@@ -21,7 +25,7 @@ import butterknife.BindView;
 /**
  * 主Activity
  */
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements MainContract.IMainView {
 
     @BindView(R.id.lly_fragment)
     LinearLayout mLlyFragment;
@@ -37,6 +41,12 @@ public class MainActivity extends BaseActivity {
 
     @BindView(R.id.rdbtn_my)
     RadioButton mRdbtnMy;
+
+    @BindView(R.id.lly_current_song)
+    LinearLayout mLlyCurrentSong;
+
+    @BindView(R.id.image_current_play)
+    ImageView mImgCurrentPlay;
 
     private MusicFragment mMusicFragment;
     private FindFragment mFindFragment;
@@ -112,7 +122,21 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void doBusiness() {
+        mLlyCurrentSong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO: 2019/8/10 点击了当前音乐
+                Toast.makeText(MainActivity.this, "点击了当前音乐", Toast.LENGTH_SHORT).show();
+            }
+        });
 
+        mImgCurrentPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO: 2019/8/10 点击了当前音乐播放
+                Toast.makeText(MainActivity.this, "点击了当前音乐播放", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     /**
@@ -150,4 +174,16 @@ public class MainActivity extends BaseActivity {
             loadMyFragment();
         }
     }
+
+    /**
+     * 临时跳转到需要的界面
+     *
+     * @param view
+     */
+    public void onClickJump(View view) {
+        Intent intent = new Intent(this, PlaySongNoLyricsActivity.class);
+        startActivity(intent);
+    }
+
+
 }

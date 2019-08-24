@@ -20,7 +20,9 @@ import com.example.leidong.openldplayer.R;
 import com.example.leidong.openldplayer.adapter.MusicMenuAdapter;
 import com.example.leidong.openldplayer.adapter.MusicTop2Adapter;
 import com.example.leidong.openldplayer.adapter.music.MusicCollectionAdapter;
+import com.example.leidong.openldplayer.adapter.music.MusicNewAlbumAdapter;
 import com.example.leidong.openldplayer.adapter.music.MusicSongListAdapter;
+import com.example.leidong.openldplayer.bean.NewAlbumBean;
 import com.example.leidong.openldplayer.bean.music.MusicCollectionBean;
 import com.example.leidong.openldplayer.bean.music.MusicMenuBean;
 import com.example.leidong.openldplayer.bean.music.MusicSongListBean;
@@ -39,7 +41,7 @@ import butterknife.ButterKnife;
  * Created by Lei Dong on 2019/6/20.
  */
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-public class MusicFragment extends Fragment implements OnBannerListener, MusicMenuAdapter.OnMusicMenuItemClickListener, MusicTop2Adapter.OnTop2ItemClickListener, MusicSongListAdapter.OnMusicSongListItemClickListener, MusicCollectionAdapter.OnMusicCollectionItemClickListener {
+public class MusicFragment extends Fragment implements OnBannerListener, MusicMenuAdapter.OnMusicMenuItemClickListener, MusicTop2Adapter.OnTop2ItemClickListener, MusicSongListAdapter.OnMusicSongListItemClickListener, MusicCollectionAdapter.OnMusicCollectionItemClickListener, MusicNewAlbumAdapter.OnMusicNewAlbumItemClickListener {
     private final String TAG = "MusicFragment";
 
     @BindView(R.id.toolbar_music)
@@ -66,6 +68,9 @@ public class MusicFragment extends Fragment implements OnBannerListener, MusicMe
     @BindView(R.id.rcl_collection_area)
     RecyclerView mRclCollectionArea;
 
+    @BindView(R.id.rcl_new_album)
+    RecyclerView mRclNewAlbum;
+
     /**
      * Banner下方的推荐列表适配器
      */
@@ -91,6 +96,10 @@ public class MusicFragment extends Fragment implements OnBannerListener, MusicMe
      * 分类专区适配器
      */
     private MusicCollectionAdapter mMusicCollectionAdapter;
+    /**
+     * 最新专辑区域
+     */
+    private MusicNewAlbumAdapter mMusicNewAlbumAdapter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -132,6 +141,26 @@ public class MusicFragment extends Fragment implements OnBannerListener, MusicMe
         initOfficialSongList();
         initExpertSongList();
         initMusicCollectionArea();
+        initNewAlbum();
+    }
+
+    /**
+     * 初始化最新专辑
+     */
+    private void initNewAlbum() {
+        List<NewAlbumBean> newAlbumBeanList = new ArrayList<>();
+        NewAlbumBean bean1 = new NewAlbumBean("红", "https://images.pexels.com/photos/207962/pexels-photo-207962.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+        NewAlbumBean bean2 = new NewAlbumBean("Love Song 4 T...", "https://images.pexels.com/photos/1660699/pexels-photo-1660699.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+        NewAlbumBean bean3 = new NewAlbumBean("Magnetic Moon", "https://images.pexels.com/photos/1684617/pexels-photo-1684617.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+        newAlbumBeanList.add(bean1);
+        newAlbumBeanList.add(bean2);
+        newAlbumBeanList.add(bean3);
+
+        mMusicNewAlbumAdapter = new MusicNewAlbumAdapter(getContext(), newAlbumBeanList);
+        mMusicNewAlbumAdapter.setOnMusicNewAlbumItemClickListener(this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRclNewAlbum.setAdapter(mMusicNewAlbumAdapter);
+        mRclNewAlbum.setLayoutManager(linearLayoutManager);
     }
 
     /**
@@ -357,6 +386,11 @@ public class MusicFragment extends Fragment implements OnBannerListener, MusicMe
     @Override
     public void onMusicCollectionItemClick(int position) {
         Toast.makeText(getContext(), "点击了第" + position + "个分类专区条目", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onMusicNewAlbumItemClick(int position) {
+        Toast.makeText(getContext(), "点击了第" + position + "个新专辑条目", Toast.LENGTH_SHORT).show();
     }
 }
 
