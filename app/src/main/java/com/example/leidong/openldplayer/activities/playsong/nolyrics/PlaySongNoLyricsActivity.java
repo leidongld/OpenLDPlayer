@@ -1,26 +1,22 @@
 package com.example.leidong.openldplayer.activities.playsong.nolyrics;
 
 import android.animation.ObjectAnimator;
-import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.leidong.openldplayer.R;
 import com.example.leidong.openldplayer.activities.BaseActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Created by Lei Dong on 2019/8/10.
  */
 public class PlaySongNoLyricsActivity extends BaseActivity {
-
-    @BindView(R.id.icon_back)
-    ImageView mIconBack;
-
     @BindView(R.id.image_song)
     ImageView mImageSong;
 
@@ -98,10 +94,51 @@ public class PlaySongNoLyricsActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
+    /**
+     * 点击了收藏图标
+     *
+     * @param view
+     */
+    public void onClickCollection(View view) {
+        // TODO: 2019/12/1 待开发  点击收藏
+        if (view.getId() == R.id.img_collection) {
+            Toast.makeText(this, "点击了收藏图标", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * 点击了下载图标
+     *
+     * @param view
+     */
+    public void onClickDownload(View view) {
+        // TODO: 2019/12/1  待开发
+        if (view.getId() == R.id.img_download) {
+            Toast.makeText(this, "点击了下载按钮", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * 点击了分享按钮
+     *
+     * @param view
+     */
+    public void onCLickShare(View view) {
+        // TODO: 2019/12/1 待开发
+        if (view.getId() == R.id.img_share) {
+            Toast.makeText(this, "点击了分享图标", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * 点击了评论图标
+     *
+     * @param view
+     */
+    public void onClickComment(View view) {
+        // TODO: 2019/12/1 待开发
+        if (view.getId() == R.id.img_comment) {
+            Toast.makeText(this, "点击了评论图标", Toast.LENGTH_SHORT).show();
+        }
     }
 }
