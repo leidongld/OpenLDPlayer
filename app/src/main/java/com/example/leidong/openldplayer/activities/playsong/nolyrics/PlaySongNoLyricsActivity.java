@@ -1,6 +1,5 @@
 package com.example.leidong.openldplayer.activities.playsong.nolyrics;
 
-import android.animation.ObjectAnimator;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -10,6 +9,11 @@ import android.widget.Toast;
 
 import com.example.leidong.openldplayer.R;
 import com.example.leidong.openldplayer.activities.BaseActivity;
+import com.example.leidong.openldplayer.multimedia.AudioPlayer;
+import com.example.leidong.openldplayer.multimedia.PlayListener;
+import com.example.leidong.openldplayer.multimedia.PlayStatus;
+
+import java.io.IOException;
 
 import butterknife.BindView;
 
@@ -41,8 +45,8 @@ public class PlaySongNoLyricsActivity extends BaseActivity {
     @BindView(R.id.img_previous)
     ImageView mImgPrevious;
 
-    @BindView(R.id.img_play_or_stop)
-    ImageView mImgPlayOrStop;
+    @BindView(R.id.img_play_or_pause)
+    ImageView mImgPlayOrPause;
 
     @BindView(R.id.img_next)
     ImageView mImgNext;
@@ -65,8 +69,9 @@ public class PlaySongNoLyricsActivity extends BaseActivity {
     @BindView(R.id.img_comment)
     ImageView mImgComment;
 
-    private ObjectAnimator mSpinAnimater;
+    private AudioPlayer mAudioPlayer;
 
+    private PlayStatus mPlayStatus = PlayStatus.STOP;
 
     @Override
     protected String setTag() {
@@ -139,6 +144,64 @@ public class PlaySongNoLyricsActivity extends BaseActivity {
         // TODO: 2019/12/1 待开发
         if (view.getId() == R.id.img_comment) {
             Toast.makeText(this, "点击了评论图标", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * 点击播放或者暂停按钮
+     *
+     * @param view
+     */
+    public void onClickPlayOrPause(View view) throws IOException {
+        mAudioPlayer = AudioPlayer.getInstance();
+        mAudioPlayer.setSongUrl("https://sharefs.yun.kugou.com/201912222122/89007500b2443b370744f95fe01c9dce/G137/M03/17/1D/aZQEAFt-jsuAFmXqAD2w54GV4Z0351.mp3");
+        mAudioPlayer.setPlayListener(new PlayListener() {
+            @Override
+            public void onStartSong() {
+                Toast.makeText(PlaySongNoLyricsActivity.this, "onStartSong", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCompleteSong() {
+                Toast.makeText(PlaySongNoLyricsActivity.this, "onCompleteSong", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPauseSong() {
+                Toast.makeText(PlaySongNoLyricsActivity.this, "onPauseSong", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onResumeSong() {
+                Toast.makeText(PlaySongNoLyricsActivity.this, "onResumeSong", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStopSong() {
+                Toast.makeText(PlaySongNoLyricsActivity.this, "onStopSong", Toast.LENGTH_SHORT).show();
+            }
+        });
+        if(mPlayStatus == PlayStatus.STOP) {
+            mImgPlayOrPause.setImageDrawable(getResources().getDrawable(R.drawable.icon_pause));
+            mAudioPlayer.start();
+            mPlayStatus = PlayStatus.PLAYING;
+        } else if (mPlayStatus == PlayStatus.PLAYING) {
+            mAudioPlayer.pause();
+            mImgPlayOrPause.setImageDrawable(getResources().getDrawable(R.drawable.icon_play));
+            mPlayStatus = PlayStatus.PAUSED;
+        } else if (mPlayStatus == PlayStatus.PAUSED) {
+            mAudioPlayer.resume();
+            mImgPlayOrPause.setImageDrawable(getResources().getDrawable(R.drawable.icon_pause));
+            mPlayStatus = PlayStatus.PLAYING;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mAudioPlayer != null) {
+            mAudioPlayer.stop();
+            mAudioPlayer = null;
         }
     }
 }
